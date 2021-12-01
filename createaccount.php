@@ -45,7 +45,7 @@ $sql = "SELECT email FROM users WHERE email = '$targetemail'";
 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
 //get the number of rows in the result set; should be 1 if a match
-if (mysqli_num_rows($result) == 1 && isset($_POST["submit"])) {
+if (mysqli_num_rows($result) == 1 && isset($_POST["create_account"])) {
 
     //email is already used message
     echo '<h3>The email address ' . $email . ' is already in use, please try again.</h3>';
@@ -60,7 +60,7 @@ if (mysqli_num_rows($result) == 1 && isset($_POST["submit"])) {
     $sql = "INSERT INTO users VALUES ('$firstname', '$lastname', '$email', SHA1('$password'))";
     if ($connect->query($sql) == true && isset($_POST['submit'])) {
         echo '<h3>Thank you '.$firstname.' '.$lastname.', your account ' . $email . ' has been created. Please sign in to book a flight.</h3>';
-        echo '<a href="login.php">Go To Bookings</a>';
+        echo '<a href="login.php">Go To Login</a>';
     }
 }
 ?>
@@ -82,7 +82,7 @@ if (mysqli_num_rows($result) == 1 && isset($_POST["submit"])) {
                     <input type="email" name="email" required></p>
                 <p><strong>Password:</strong><br>
                     <input type="password" name="password" required></p>
-                <p><input type="submit" name="submit" value="Create Account"></p>
+                <p><input type="submit" name="create_account" value="Create Account"></p>
             </fieldset>
         </form>
     </body>
