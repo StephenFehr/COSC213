@@ -23,7 +23,7 @@ if(mysqli_num_rows($result) == 1){
     $firstname = stripslashes($info["firstname"]);
     $lastname = stripslashes($info["lastname"]);
   }
-  $_SESSION["auth_user"] = "$firstname $lastname";
+  $_SESSION["auth_user"] = $firstname." ".$lastname;
   $authenticated = "Welcome ".$_SESSION["auth_user"];
   
   //set authorization cookie
