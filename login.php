@@ -1,18 +1,6 @@
 <?php
 session_start();
 $_SESSION["loggedin"] = false;
-$_SESSION["invalid"];
-if($_SESSION["invalid"] > 0)
-{
-echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-        $(document).ready(function(){
-          $("#login").click(function(){
-            $("#error").text("User unauthorized, please try again.");
-          });
-        });
-        </script>';
-}
 ?>
 <!DOCTYPE html>
 <!--
