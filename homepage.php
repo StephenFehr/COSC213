@@ -51,8 +51,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <h1><i><Strong>Ubuntu Regional Airport</strong></i></h1>
         <div class="header">
             <a href="homepage.php" style="pointer-events: none;">Home</a>
-            <a href="features.php">Features</a>
-            <a href="bookings.php">Bookings</a>
+            <a href="aircraft.php">Features</a>
+            <a href="scheduling.php">Bookings</a>
             <a href="login.php">Logout</a>
         </div>
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
