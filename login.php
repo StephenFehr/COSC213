@@ -40,17 +40,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <!-- content -->
         <br>
         <div>
-            <h3><?php echo $message; ?><h3>
-            <h4 style="color: red;"><?ph echo $error; ?></h4>
-            <form method="post" action="confirmflight.php">
+            <form method="post" action="confirmflight.php">\
+                <h3><?php echo $message; ?><h3>
+                <h4 style="color: red;"><?ph echo $error; ?></h4>
                 <label for="validEmail">Email:</label>
                 <input type="email" name="validEmail">
                 <label for="validPassword">Password:</label>
                 <input type="password" name="validPassword">
                 <input type="submit" name="login" value="Login">
-        </form>
-        <br>
-        <a href="createaccount.php">Create Account</a>
+            </form>
+            <br>
+            <a href="createaccount.php">Create Account</a>
         </div>
     </body>
 </html>
