@@ -24,7 +24,7 @@ if(mysqli_num_rows($result) == 1){
     $lastname = stripslashes($info["lastname"]);
   }
   $_SESSION["auth_user"] = $firstname." ".$lastname;
-  $authenticated = "Welcome ".$_SESSION["auth_user"]."";
+  $authenticated = "Welcome ".$_SESSION["auth_user"].", please confirm your flight details.";
   
   //set authorization cookie
   setcookie("auth", session_id(), time() + 60 * 30, "/", "", 0);
