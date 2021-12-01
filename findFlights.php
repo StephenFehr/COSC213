@@ -1,6 +1,6 @@
 <?php
      echo "<p> value: ".$_GET["PlaneID"]."</p>";
-    $id = $_GET["PlaneID"];
+    $id = (str)$_GET["PlaneID"];
     $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfield");
     $sql = "SELECT * FROM flights f, planes p, pilots pi 
 			WHERE p.plane_id = f.plane_id AND pi.pilot_id = f.pilot_id AND f.plane_id = $id";
