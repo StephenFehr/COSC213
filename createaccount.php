@@ -31,7 +31,6 @@ $username = $_POST['username'];
 $email = strtolower($_POST['email']);
 $password = $_POST['password'];
 $form = true;
-$message = "A confirmation email has been sent to '.email.'";
 
 //connect to server and select database
 $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfieldDB");
@@ -45,8 +44,8 @@ $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 //get the number of rows in the result set; should be 1 if a match
 if (mysqli_num_rows($result) == 1) {
 
-    //email is already used
-    echo '<h3>The email address "' . $email . '" is already in use, please try again.</h3>';
+    //email is already used message
+    echo '<h3>The email address ' . $email . ' is already in use, please try again.</h3>';
 } else {
     //connect to server and select database
     $connect = new mysqli("localhost", "cs213user", "letmein", "airfieldDB");
@@ -57,7 +56,7 @@ if (mysqli_num_rows($result) == 1) {
     //make a user directory and store user in database
     $sql = "INSERT INTO users VALUES ('$username', $email', SHA1('$password'))";
     if ($connect->query($sql) == true && isset($_POST['submit'])) {
-        echo '<h3>Your account "' . $email . '" has been created. Thank you for joining us!</h3>';
+        echo '<h3>Your account ' . $email . ' has been created. Thank you for joining. Please sign in to book a flight.</h3>';
         echo '<a href="bookings.php">Go To Bookings</a>';
     }
 }
