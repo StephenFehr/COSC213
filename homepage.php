@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_POST["unauthorized"] = "User is unauthorized, please try again.";
 if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword')))
 {
   header("Location: login.html");
@@ -29,7 +30,6 @@ if(mysqli_num_rows($result) == 1){
 }
 else
 {
-  $_POST["unauthorized"] = "User is unauthorized, please try again.";
   header("Location: login.php");
   exit;
 }
