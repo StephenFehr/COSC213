@@ -46,12 +46,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
  */
 session_start();
-if (isset($_POST["submit"])) {
-    $message = "Flight is available for booking. Please log in or create account to confirm booking.";  
-}
-else
+if (isset($_POST["submit"])) 
 {
-    $message = "Flight is available for booking. Please log in or create account to confirm booking.";
     $error = "Unauthorized user, please try again.";
 }
 ?>
