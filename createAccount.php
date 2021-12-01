@@ -16,12 +16,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <img src="images/logo.png" alt="Logo" style="width: 400px; height: 100px;">
         </div>
         <h1 class="regional"><i><Strong>Ubuntu Regional Airport</strong></i></h1>
-        <div class="header">
-            <a href="homepage.html">Home</a>
-            <a href="features.php">Features</a>
-            <a href="bookings.php">Bookings</a>
-            <a href="logout.php">Logout</a>
-        </div>
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
         <!-- content -->
         <div>
@@ -70,6 +64,7 @@ if (mysqli_num_rows($result) == 1 && isset($_POST["create_account"])) {
         <title>Create Account</title>
     </head>
     <body style="background-color: bisque">
+        <h2>Please create account below</h2>
         <form name="form" method="post" action="<?php echo $PHP_SELF; ?>">
             <fieldset>
                 <legend><h3>User Information</h3></legend>
