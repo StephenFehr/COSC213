@@ -38,7 +38,7 @@ $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfieldDB");
 
 //create and issue the query
 $targetemail = filter_input(INPUT_POST, 'email');
-$sql = "SELECT email FROM members WHERE email = '$targetemail'";
+$sql = "SELECT email FROM users WHERE email = '$targetemail'";
 
 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
@@ -55,7 +55,7 @@ if (mysqli_num_rows($result) == 1) {
     }
 
     //make a user directory and store user in database
-    $sql = "INSERT INTO members VALUES ('$username', $email', SHA1('$password'))";
+    $sql = "INSERT INTO users VALUES ('$username', $email', SHA1('$password'))";
     if ($connect->query($sql) == true && isset($_POST['submit'])) {
         echo '<h3>Your account "' . $email . '" has been created. Thank you for joining us!</h3>';
         echo '<a href="bookings.php">Go To Bookings</a>';
