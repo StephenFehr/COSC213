@@ -9,6 +9,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          $("submit").click(function(){
+            $("#error").text("User is unauthorized, please try again.");
+          });
+        });
+        </script>
     </head>
     <body>
         <!-- header -->
@@ -35,13 +43,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <a href="createAccount.php">Create Account</a>
             </fieldset>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-        $(document).ready(function(){
-          $("submit").click(function(){
-            $("#error").text("User is unauthorized, please try again.");
-          });
-        });
-        </script>
     </body>
 </html>
