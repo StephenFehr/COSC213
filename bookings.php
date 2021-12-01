@@ -16,6 +16,25 @@
               xhttp.open("GET", "findPlanes.php", true);
               xhttp.send();
             }
+             
+             function showFLights(str) {
+              var xhttp = new XMLHttpRequest();
+              
+                if (str=="") {
+                    document.getElementById("flights").innerHTML="";
+                    return;
+                }
+                    
+              xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("flights").innerHTML = this.responseText;
+                    }
+              };
+              xhttp.open("GET", "findFlights.php?flightID="+str, true);
+              xhttp.send();
+            
+            }
+             
         </script>
         
     </head>
