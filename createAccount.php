@@ -64,10 +64,10 @@ if (mysqli_num_rows($result) == 1 && isset($_POST["create_account"])) {
         <title>Create Account</title>
     </head>
     <body style="background-color: bisque">
-        <h2>Please create account below.</h2>
+        <h2>Please create account.</h2>
         <form name="form" method="post" action="<?php echo $PHP_SELF; ?>">
             <fieldset>
-                <legend><h3>Account Information</h3></legend>
+                <legend><h3>User Information</h3></legend>
                 <p><strong>First name:</strong><br>
                     <input type="text" name="firstname" required></p>
                 <p><strong>Last name:</strong><br>
