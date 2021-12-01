@@ -17,7 +17,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
         <h1 class="regional"><i><Strong>Ubuntu Regional Airport</strong></i></h1>
         <div class="header">
-            <a href="login.html">Return to Login</a>
+            <a href="login.php">Return to Login</a>
         </div>
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
         <!-- content -->
