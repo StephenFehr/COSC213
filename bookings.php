@@ -4,6 +4,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+         <script>
+              function showPlanes() {
+              var xhttp = new XMLHttpRequest();
+                    
+              xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("planes").innerHTML = this.responseText;
+                    }
+              };
+              xhttp.open("GET", "findPlanes.php", true);
+              xhttp.send();
+            }
+        </script>
+        
     </head>
     <body>
         <!-- header -->
@@ -23,6 +37,7 @@
         <p style="color: red;"><strong>Please note that current COVID-19 travel restrictions may affect all flights and bookings.</strong></p>
         <div class="booking">
             <form method="post" action="login.php">
+                <button type="button" onclick="showPLanes()"> Air Craft</button>
                 <label for="airline"><strong>Select airline:</strong></label>
                 <select name="airline">
                     <option>Ubuntu Air</option>
