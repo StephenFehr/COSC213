@@ -67,8 +67,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
       <br>
       <h2>Total: <?php echo $total; ?></h2>
         <form name="form" method="post" action="purchase">
+          <div>
             <fieldset>
-              <div>
                 <legend><h3>Payment Information</h3></legend>
                   <p><strong>Name on Card:</strong><br>
                       <input type="text" name="fullName" required></p>
