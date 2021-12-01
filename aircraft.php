@@ -25,9 +25,9 @@
         <!-- content -->
         <h2>Featured Aircraft.</h2>
         
-        <img class="" src="images/cessna150.jpeg" alt="Cessna 150 Airplane Image" style="width: 400px; height: 500px;">
-        <img src="images/harbinY12.jpg" alt="Harbin Y12 Airplane Image" style="width: 400px; height: 500px;">
-        <img src="images/gafNomad.jpg" alt="GAF Nomad Aiplane Image" style="width: 400px; height: 500px;">
+        <img class="" src="images/cessna150.jpeg" alt="Cessna 150 Airplane Image" style="width: 500px; height: 400px;">
+        <img src="images/harbinY12.jpg" alt="Harbin Y12 Airplane Image" style="width: 500px; height: 400px;">
+        <img src="images/gafNomad.jpg" alt="GAF Nomad Aiplane Image" style="width: 500px; height: 400px;">
         
     </body>
 </html>
