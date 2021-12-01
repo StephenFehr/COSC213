@@ -1,6 +1,9 @@
 <?php
 session_start();
 $_SESSION["loggedin"] = false;
+$_SESSION["invalid"];
+if($_SESSION["invalid"] > 0)
+{
 echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
         $(document).ready(function(){
@@ -9,6 +12,7 @@ echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min
           });
         });
         </script>';
+}
 ?>
 <!DOCTYPE html>
 <!--
