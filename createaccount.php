@@ -44,7 +44,7 @@ $sql = "SELECT email FROM users WHERE email = '$targetemail'";
 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
 //get the number of rows in the result set; should be 1 if a match
-if (mysqli_num_rows($result) == 1) {
+if (mysqli_num_rows($result) == 1 && isset($_POST["submit"])) {
 
     //email is already used message
     echo '<h3>The email address ' . $email . ' is already in use, please try again.</h3>';
