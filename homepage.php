@@ -30,7 +30,7 @@ if(mysqli_num_rows($result) == 1){
 }
 else
 {
-  header("Location: login.php");
+  header("Location: login.html");
   exit;
 }
 ?>
