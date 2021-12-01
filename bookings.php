@@ -45,8 +45,8 @@
         <div class="header">
             <a href="homepage.php">Home</a>
             <a href="features.php">Features</a>
-            <a href="bookings.php" style="pointer-events: none;">Bookings</a>
-            <a href="login.html">Logout</a>
+            <a href="bookings.php">Bookings</a>
+            <a href="logout.php">Logout</a>
         </div>
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
         <!-- content -->
@@ -63,7 +63,7 @@
                 $select= '<select name="plane_id" onchange="showFlights(this.value)">';
                 $select.='<option value="">Select a plane:</option>';
                 while($row=mysqli_fetch_array($result)){
-                    $select.='<option value="'.$row['model'].'">'.$row['plane_id'].'</option>';
+                    $select.='<option value="'.$row['model'].'">'.$row['model'].'</option>';
                 }
             mysqli_free_result($result);
             mysqli_close($mysqli);
