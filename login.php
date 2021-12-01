@@ -41,7 +41,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <!-- content -->
         <br>
         <div>
-            <form method="post" action="confirmflight.php">
+            <form method="post" action="confirmFlight.php">
                 <h3><?php echo $message; ?><h3>
                 <h4 style="color: red;"><?php echo $error; ?></h4>
                 <label for="validEmail"><strong>Email:</strong></label>
@@ -51,7 +51,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <input type="submit" name="submit" value="Login">
             </form>
             <br>
-            <a href="createaccount.php">Create Account</a>
+            <a href="createAccount.php">Create Account</a>
         </div>
     </body>
 </html>
