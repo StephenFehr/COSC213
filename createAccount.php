@@ -20,6 +20,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <a href="homepage.html">Home</a>
             <a href="features.php">Features</a>
             <a href="bookings.php">Bookings</a>
+            <a href="login.php">Login</a>
             <a href="logout.php">Logout</a>
         </div>
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
