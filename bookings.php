@@ -63,7 +63,7 @@
                 $select= '<select name="plane_id" onchange="showFlights(this.value)">';
                 $select.='<option value="">Select a plane:</option>';
                 while($row=mysqli_fetch_array($result)){
-                    $select.='<option value="'.$row['model'].'">'.$row['model'].'</option>';
+                    $select.='<option value="'.$row['plane_id'].'">'.$row['plane_id'].'</option>';
                 }
             mysqli_free_result($result);
             mysqli_close($mysqli);
