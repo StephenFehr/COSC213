@@ -31,9 +31,8 @@ if(mysqli_num_rows($result) == 1){
   }
   $_SESSION["email"] = $email;
   $_SESSION["auth_user"] = $firstname." ".$lastname;
-}
-?>
-<!DOCTYPE html>
+  
+echo '<!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
@@ -71,4 +70,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <p id="departures">Departures</p>
         </div>
     </body>
-</html>
+</html>';
+}
+?>
