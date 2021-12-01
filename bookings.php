@@ -28,7 +28,7 @@
                         document.getElementById("flights").innerHTML = this.responseText;
                     }
               };
-              xhttp.open("GET", "findFlights.php?flightID="+str, true);
+              xhttp.open("GET", "findFlights.php?PlaneID="+str, true);
               xhttp.send();
             
            }
@@ -61,7 +61,7 @@
              $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfield");  
              $result=mysqli_query($mysqli, "SELECT model,plane_id FROM planes");
              if(mysqli_num_rows($result)> 0){
-                $select= '<select name="plane_id" onchange="showFlights(this.value)">';
+                $select= '<select name="PlaneID" onchange="showFlights(this.value)">';
                 $select.='<option value="">Select a plane:</option>';
                 while($row=mysqli_fetch_array($result)){
                     $select.='<option value="'.$row['plane_id'].'">'.$row['plane_id'].'</option>';
