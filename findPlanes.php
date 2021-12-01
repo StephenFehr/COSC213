@@ -2,6 +2,8 @@
     $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfield");
     $sql = "SELECT * from planes;";
     $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
+    
+    echo <p> HELLO! </p>
                
     if (mysqli_num_rows($result)< 1){
         header ("Location: bookings.php");
