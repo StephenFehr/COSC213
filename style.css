@@ -43,6 +43,7 @@ body {
 
 #headerMessage {
     float: right;
+    display: inline-block;
 }
 
 #titleImage {
