@@ -57,10 +57,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
         <h1><i><Strong>Ubuntu Regional Airport</strong></i></h1>
         <div class="header">
-            <a href="homepage.html">Home</a>
+            <a href="homepage.php">Home</a>
             <a href="features.php">Features</a>
             <a href="bookings.php">Bookings</a>
-            <a href="logout.php">Logout</a>
+            <a href="login.php">Logout</a>
         </div>
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
         <!-- content -->
