@@ -24,5 +24,10 @@
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
         <!-- content -->
         <h2>Featured Aircraft.</h2>
+        
+        <img src="images/cessna150.jpg" alt="Logo" style="width: 400px; height: 100px;">
+        <img src="images/harbinY12.jpg" alt="Logo" style="width: 400px; height: 100px;">
+        <img src="images/gafNomad.jpg" alt="Logo" style="width: 400px; height: 100px;">
+        
     </body>
 </html>
