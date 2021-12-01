@@ -2,7 +2,7 @@
 session_start();
 if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword')))
 {
-  header("Location: login.php");
+  header("Location: login.html");
   exit;
 }
 //check database for valid email and password fields
