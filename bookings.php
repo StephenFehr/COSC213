@@ -36,8 +36,5 @@
                 <input type="submit" name="submit" value="Check Availability">
             </form>
         </div>
-        <div>
-
-        </div>
     </body>
 </html>
