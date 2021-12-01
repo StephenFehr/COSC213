@@ -1,10 +1,8 @@
 <?php
 session_start();
-if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword')) || (!filter_input(INPUT_POST, '')))
+if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword')))
 {
-  header("Location: login.html");
-  exit;
-}
+
 //check database for valid email and password fields
 $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfieldDB");
 $validEmail = filter_input(INPUT_POST, 'validEmail');
@@ -26,6 +24,7 @@ if(mysqli_num_rows($result) == 1){
   }
   $_SESSION["email"] = $email;
   $_SESSION["auth_user"] = $firstname." ".$lastname;
+}
 }
 ?>
 <!DOCTYPE html>
