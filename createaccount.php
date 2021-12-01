@@ -29,7 +29,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 </html>
 <?php
 session_start();
-$username = $_POST['username'];
+$firstname = $_POST['firstname'];
+$lastname = $_POST['lastname'];
 $email = strtolower($_POST['email']);
 $password = $_POST['password'];
 $form = true;
@@ -56,9 +57,9 @@ if (mysqli_num_rows($result) == 1 && isset($_POST["submit"])) {
     }
 
     //make a user directory and store user in database
-    $sql = "INSERT INTO users VALUES ('$username', '$email', SHA1('$password'))";
+    $sql = "INSERT INTO users VALUES ('$firstname', '$lastname', '$email', SHA1('$password'))";
     if ($connect->query($sql) == true && isset($_POST['submit'])) {
-        echo '<h3>Thank you, your account ' . $email . ' has been created. Please sign in to book a flight.</h3>';
+        echo '<h3>Thank you '.$firstname.' '.$lastname.', your account ' . $email . ' has been created. Please sign in to book a flight.</h3>';
         echo '<a href="bookings.php">Go To Bookings</a>';
     }
 }
