@@ -104,21 +104,12 @@ if (mysqli_num_rows($result) == 1) {
         <form name="form" method="post" action="<?php echo $PHP_SELF; ?>">
             <fieldset>
                 <legend><h3>User Information</h3></legend>
-                <p><strong>First Name:</strong><br>
-                    <input type="text" name="firstname" required/></p>
-                <p><strong>Last Name:</strong><br>
-                    <input type="text" name="lastname" required/></p>
+                <p><strong>Username:</strong><br>
+                    <input type="text" name="username" required/></p>
                 <p><strong>Email:</strong><br>
                     <input type="email" name="email" required/></p>
                 <p><strong>Password:</strong><br>
                     <input type="password" name="password" required/></p>
-                <p><strong>Age:</strong><br>
-                    <input style="width: 100px" type="number" name="age" required/></p>
-                <p><strong>Gender:</strong></p>                   
-                <p>
-                    <input type="radio" name="gender" value="male" required/><label for="male">Male</label>
-                    <input type="radio" name="gender" value="female" required/><label for="female">Female</label>
-                </p>
                 <p><input type="submit" name="submit" value="Create Account"/></p>
             </fieldset>
         </form>
