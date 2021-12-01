@@ -8,7 +8,7 @@
     $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
                
     if (mysqli_num_rows($result)< 1){
-        header ("Location: bookings.php");
+        header ("Location: scheduling.php");
                  }
     else {
         $row = mysqli_fetch_array($result);
