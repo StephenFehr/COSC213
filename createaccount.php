@@ -25,6 +25,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
         <!-- content -->
         <div>
+    </body>
+</html>
 <?php
 session_start();
 $username = $_POST['username'];
