@@ -41,10 +41,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div>
             <h4><?php echo $message; ?><h4>
             <form method="post" action="userlogin.php">
-                <label for="email">Email:</label>
-                <input type="text" name="email">
-                <label for="password">Password:</label>
-                <input type="password" name="password">
+                <label for="validEmail">Email:</label>
+                <input type="email" name="validEmail">
+                <label for="validPassword">Password:</label>
+                <input type="password" name="validPassword">
                 <input type="submit" name="login" value="Login">
         </form>
         <br>
