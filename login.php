@@ -41,7 +41,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <!-- content -->
         <br>
         <div>
-            <form method="post" action="confirmFlight.php">
+            <form method="post" action="payment.php">
                 <h3><?php echo $message; ?><h3>
                 <h4 style="color: red;"><?php echo $error; ?></h4>
                 <label for="validEmail"><strong>Email:</strong></label>
