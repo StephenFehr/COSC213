@@ -17,14 +17,12 @@
               xhttp.send();
             }
              
-             function showFLights(str) {
+            function showFlights(str) {
               var xhttp = new XMLHttpRequest();
-              
                 if (str=="") {
                     document.getElementById("flights").innerHTML="";
                     return;
-                }
-                    
+                }        
               xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         document.getElementById("flights").innerHTML = this.responseText;
@@ -33,7 +31,7 @@
               xhttp.open("GET", "findFlights.php?flightID="+str, true);
               xhttp.send();
             
-            }
+           }
              
         </script>
         
@@ -57,7 +55,7 @@
         <div class="booking">
             
             <form>
-             <button type="button" onclick="showPLanes()"> Air Craft</button>&nbsp;&nbsp;&nbsp;Find flights taken by Tail Number: 
+             <button type="button" onclick="showPlanes()"> Air Craft</button>&nbsp;&nbsp;&nbsp;Find flights taken by Tail Number: 
             <?php
              $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfield");  
              $result=mysqli_query($mysqli, "SELECT model,plane_id FROM planes");
@@ -67,7 +65,7 @@
                 while($row=mysqli_fetch_array($result)){
                     $select.='<option value="'.$row['model'].'">'.$row['plane_id'].'</option>';
                 }
-             mysqli_free_result($result);
+            mysqli_free_result($result);
             mysqli_close($mysqli);
             }
             $select.='</select>';
