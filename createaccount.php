@@ -31,18 +31,10 @@ $username = $_POST['username'];
 $email = strtolower($_POST['email']);
 $password = $_POST['password'];
 $form = true;
-$path = "/var/www/html/uploaddir/$email";
-
-//@myokanagan.bc.ca validation, email and message variables
-$OKextension = "@myokanagan.bc.ca";
-$emailOK = strtolower($firstname . "." . $lastname . $OKextension);
-$to = $emailOK; //----------------------------------------------------------------->might need quotes to make a string ""
-$subject = "Thank You For Joining!";
-$message = "Welcome to join us! Our annual dinner meeting is scheduled on Friday, November 26, 2021 starting at 7:00 pm "
-        . "in the Conference Hall of Caprice Hotel in Kelowna. Please call 250-767-7897 for details.";
+$message = "A confirmation email has been sent to '.email.'";
 
 //connect to server and select database
-$mysqli = mysqli_connect("localhost", "cs213user", "letmein", "testDB");
+$mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfieldDB");
 
 //create and issue the query
 $targetemail = filter_input(INPUT_POST, 'email');
@@ -54,7 +46,7 @@ $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 if (mysqli_num_rows($result) == 1) {
 
     //email is already used
-    echo '<h3>The email address "' . $email . '" is already in use, try again!</h3>';
+    echo '<h3>The email address "' . $email . '" is already in use, please try again.</h3>';
 } else {
     //connect to server and select database
     $connect = new mysqli("localhost", "cs213user", "letmein", "testDB");
@@ -62,31 +54,12 @@ if (mysqli_num_rows($result) == 1) {
         die("Connection failed: " . $connect->connect_error);
     }
 
-    //set authorization cookie using curent Session ID
-    setcookie("auth", session_id(), time() + 60 * 30, "/", "", 0);
-
     //make a user directory and store user in database
-    $sql = "INSERT INTO members VALUES ('$firstname', '$lastname', '$email', SHA1('$password'), '$age', '$gender', '$date')";
+    $sql = "INSERT INTO members VALUES ('$username', $email', SHA1('$password'))";
     if ($connect->query($sql) == true && isset($_POST['submit'])) {
-
-        //check if user email is a @myokanagan.bc.ca email
-        if ($email == $emailOK) {
-            
-            include ("maillist_include.php");
-            include ("gmail.php");            
-
-            gmail($to, $subject, $message);
-            //umask(000);//---------------------------------------------------------->may not need this???
-            //mkdir($path, 0733);//-------------------------------------------------->turn on before submitting
-            echo '<h3>Thank you for signin up! Check your email ' . $emailOK . ' for more information!</h3>';
-            echo '<a href="lottoLogin.html">Go to Login</a>';
-        } else {
-            //umask(000);//---------------------------------------------------------->may not need this???
-            //mkdir($path, 0733);//-------------------------------------------------->turn on before submitting
-            echo $emailOK;
-            echo '<h3>Your account "' . $email . '" has been created. Thank you for joining us!</h3>';
-            echo '<a href="lottoLogin.html">Go to Login</a>';
-        }
+        echo $emailOK;
+        echo '<h3>Your account "' . $email . '" has been created. Thank you for joining us!</h3>';
+        echo '<a href="lottoLogin.html">Go to Login</a>';
     }
 }
 ?>
