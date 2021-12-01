@@ -4,7 +4,7 @@
 ?>
 <html>
     <head>
-        <title>Book a Flight</title>
+        <title>Featured Aircraft</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">        
@@ -25,9 +25,9 @@
         <!-- content -->
         <h2>Featured Aircraft.</h2>
         
-        <img src="images/cessna150.jpeg" alt="Logo" style="width: 400px; height: 400px;">
-        <img src="images/harbinY12.jpg" alt="Logo" style="width: 400px; height: 400px;">
-        <img src="images/gafNomad.jpg" alt="Logo" style="width: 400px; height: 400px;">
+        <img src="images/cessna150.jpeg" alt="Logo" style="width: 400px; height: 500px;">
+        <img src="images/harbinY12.jpg" alt="Logo" style="width: 400px; height: 500px;">
+        <img src="images/gafNomad.jpg" alt="Logo" style="width: 400px; height: 500px;">
         
     </body>
 </html>
