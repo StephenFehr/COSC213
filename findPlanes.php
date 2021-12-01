@@ -4,7 +4,7 @@
     $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
                
     if (mysqli_num_rows($result)< 1){
-        header ("Location: bookings.php");
+        header ("Location: scheduling.php");
     }
     else {
         echo "<h2> Available Planes: </h2>";
