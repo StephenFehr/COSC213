@@ -61,6 +61,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
         <!-- content -->
-      <?php echo $authenticated; ?>
+      <br>
+      <h2><?php echo $authenticated; ?><h2>
     </body>
 </html>
