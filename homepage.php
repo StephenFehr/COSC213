@@ -64,7 +64,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
         <!-- content -->
         <div>
-            <h2>Welcome <?php echo $authenticated; ?> to DNS Airfield.</h2>
+            <h2>Welcome <?php echo $_SESSION["auth_user"] ?> to DNS Airfield.</h2>
             <p>DNS Airfield is a regional airfield that can accommodate small to medium single and twin prop aircraft. 
                 The single runway is 1,585m(5,200 feet) in length and 61m(200 feet) wide.
                 The airfield houses 5 hangar bays and a small terminal. 
