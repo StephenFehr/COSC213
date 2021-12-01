@@ -44,9 +44,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <form method="post" action="confirmflight.php">
                 <h3><?php echo $message; ?><h3>
                 <h4 style="color: red;"><?php echo $error; ?></h4>
-                <label for="validEmail">Email:</label>
+                <label for="validEmail"><strong>Email:</strong></label>
                 <input type="email" name="validEmail">
-                <label for="validPassword">Password:</label>
+                <label for="validPassword"><strong>Password:</strong></label>
                 <input type="password" name="validPassword">
                 <input type="submit" name="submit" value="Login">
             </form>
