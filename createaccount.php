@@ -33,7 +33,6 @@ $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
 $email = strtolower($_POST['email']);
 $password = $_POST['password'];
-$form = true;
 
 //connect to server and select database
 $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfieldDB");
@@ -60,6 +59,7 @@ if (mysqli_num_rows($result) == 1 && isset($_POST["create_account"])) {
     $sql = "INSERT INTO users VALUES ('$firstname', '$lastname', '$email', SHA1('$password'))";
     if ($connect->query($sql) == true && isset($_POST['create_account'])) {
         echo '<h3>Thank you '.$firstname.' '.$lastname.', your account ' . $email . ' has been created. Please sign in to book a flight.</h3>';
+        echo '<a href="login.php">Go To Login</a>';
         echo '<a href="login.php">Go To Login</a>';
     }
 }
