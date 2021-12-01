@@ -37,7 +37,7 @@
         <p style="color: red;"><strong>Please note that current COVID-19 travel restrictions may affect all flights and bookings.</strong></p>
         <div class="booking">
             <form method="post" action="login.php">
-                <button type="button" onclick="showPLanes()"> Air Craft</button>
+                <button type="button" onclick="showPLanes()"> Air Craft </button> <br> <br>
                 <label for="airline"><strong>Select airline:</strong></label>
                 <select name="airline">
                     <option>Ubuntu Air</option>
