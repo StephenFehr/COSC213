@@ -1,10 +1,11 @@
 <?php
 session_start();
-$_SESSION["invalid"]++;
+//$_SESSION["invalid"]++;
 if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword')))
 {
   if($_SESSION["loggedin"] == false)
   {
+    $_SESSION["unauthorized"] = "User unauthorized, please try again.";
     header("Location: login.php");
     exit;
   }
