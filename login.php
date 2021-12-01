@@ -4,11 +4,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
  */
 session_start();
-if (isset($_POST["submit"]) || isset($_POST["login"])) {
+if (isset($_POST["submit"])) {
     $message = "Flight is available for booking. Please log in or create account to confirm booking.";  
 }
 else
 {
+    $message = "Flight is available for booking. Please log in or create account to confirm booking.";
     $error = "Unauthorized user, please try again.";
 }
 ?>
@@ -47,7 +48,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <input type="email" name="validEmail">
                 <label for="validPassword">Password:</label>
                 <input type="password" name="validPassword">
-                <input type="submit" name="login" value="Login">
+                <input type="submit" name="submit" value="Login">
             </form>
             <br>
             <a href="createaccount.php">Create Account</a>
