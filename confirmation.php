@@ -4,7 +4,7 @@ if(filter_input(INPUT_COOKIE, "auth") == session_id())
 {
     if(isset($_POST["submit"]))
     {
-        $confirmation = "A confirmation email has been sent to '.$_SESSION["email"].'";
+        $confirmation = "A confirmation email has been sent to ".$_SESSION["email"]."";
     }
 }
 else
