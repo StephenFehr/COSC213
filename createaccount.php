@@ -60,7 +60,7 @@ if (mysqli_num_rows($result) == 1 && isset($_POST["submit"])) {
     $sql = "INSERT INTO users VALUES ('$firstname', '$lastname', '$email', SHA1('$password'))";
     if ($connect->query($sql) == true && isset($_POST['submit'])) {
         echo '<h3>Thank you '.$firstname.' '.$lastname.', your account ' . $email . ' has been created. Please sign in to book a flight.</h3>';
-        echo '<a href="bookings.php">Go To Bookings</a>';
+        echo '<a href="login.php">Go To Bookings</a>';
     }
 }
 ?>
