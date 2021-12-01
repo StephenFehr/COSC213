@@ -41,11 +41,6 @@ body {
     border-radius: 4px;
 }
 
-#headerMessage {
-    float: right;
-    display: inline-block;
-}
-
 #titleImage {
     display: block;
     margin-right: auto;
