@@ -26,12 +26,10 @@ if(mysqli_num_rows($result) == 1){
   }
   $_SESSION["email"] = $email;
   $_SESSION["auth_user"] = $firstname." ".$lastname;
-  
-  //set authorization cookie
-  setcookie("auth", session_id(), time() + 60 * 30, "/", "", 0);
 }
 else
 {
+  $_SESSION["unauthorized"] = "User is unauthorized, please try again";
   header("Location: login.html");
   exit;
 }
