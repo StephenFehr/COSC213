@@ -1,30 +1,36 @@
 <?php
 session_start();
-if((filter_input(INPUT_POST, 'validEmail')) || (filter_input(INPUT_POST, 'validPassword')))
+$count = 0;
+if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword')) && count == 0)
 {
-
-//check database for valid email and password fields
-$mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfieldDB");
-$validEmail = filter_input(INPUT_POST, 'validEmail');
-$validPassword = filter_input(INPUT_POST, 'validPassword');
-
-//query database
-$sql = "SELECT firstname, lastname, email, password FROM users WHERE email = '".$validEmail."' AND password = SHA1('".$validPassword."')";
-
-//get results from valid input query
-$result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
-if(mysqli_num_rows($result) == 1){
-  
-  //get user information
-  while($info = mysqli_fetch_array($result))
-  {
-    $email = stripslashes($info["email"]);
-    $firstname = stripslashes($info["firstname"]);
-    $lastname = stripslashes($info["lastname"]);
-  }
-  $_SESSION["email"] = $email;
-  $_SESSION["auth_user"] = $firstname." ".$lastname;
+  header("Location: login.html");
+  exit;
 }
+else
+{
+  $count = 1;
+  //check database for valid email and password fields
+  $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfieldDB");
+  $validEmail = filter_input(INPUT_POST, 'validEmail');
+  $validPassword = filter_input(INPUT_POST, 'validPassword');
+
+  //query database
+  $sql = "SELECT firstname, lastname, email, password FROM users WHERE email = '".$validEmail."' AND password = SHA1('".$validPassword."')";
+
+  //get results from valid input query
+  $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
+  if(mysqli_num_rows($result) == 1){
+
+    //get user information
+    while($info = mysqli_fetch_array($result))
+    {
+      $email = stripslashes($info["email"]);
+      $firstname = stripslashes($info["firstname"]);
+      $lastname = stripslashes($info["lastname"]);
+    }
+    $_SESSION["email"] = $email;
+    $_SESSION["auth_user"] = $firstname." ".$lastname;
+  }
 }
 ?>
 <!DOCTYPE html>
