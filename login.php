@@ -4,8 +4,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
  */
 session_start();
-if (isset($_POST["submit"])) {
+if (isset($_POST["submit"]) || isset($_POST["login"])) {
     $message = "Flight is available for booking. Please log in or create account to confirm booking.";  
+}
+else
+{
+    $error = "Unauthorized user, please try again.";
 }
 ?>
 <!DOCTYPE html>
@@ -37,6 +41,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <br>
         <div>
             <h3><?php echo $message; ?><h3>
+            <h4 style="color: red;"><?ph echo $error; ?></h4>
             <form method="post" action="confirmflight.php">
                 <label for="validEmail">Email:</label>
                 <input type="email" name="validEmail">
