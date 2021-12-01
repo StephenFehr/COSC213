@@ -1,18 +1,3 @@
-<?php
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
- */
-session_start();
-if (isset($_POST["submit"])) {
-    $message = "Flight is available for booking. Please log in or create account to confirm booking.";  
-}
-else
-{
-    $message = "Flight is available for booking. Please log in or create account to confirm booking.";
-    $error = "Unauthorized user, please try again.";
-}
-?>
 <!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -55,3 +40,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
     </body>
 </html>
+<?php
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
+ */
+session_start();
+if (isset($_POST["submit"])) {
+    $message = "Flight is available for booking. Please log in or create account to confirm booking.";  
+}
+else
+{
+    $message = "Flight is available for booking. Please log in or create account to confirm booking.";
+    $error = "Unauthorized user, please try again.";
+}
+?>
