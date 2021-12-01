@@ -73,10 +73,11 @@
             $select.='</select>';
             echo $select;
             ?>
-        </form>
-        <div id="planes"></div>
-        <div id="flights"></div>
+        </form>     
             
         </div>
+        <div id="planes"></div>
+        <div id="flights"></div>
+
     </body>
 </html>
