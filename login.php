@@ -17,7 +17,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
         <h1><i><Strong>Ubuntu Regional Airport</strong></i></h1>
         <div id="headerMessage">
-            <h1>Welcome, please sign in to access content<h1>
+            <h1>Welcome, please sign in to access content.<h1>
         </div>
         <div class="header">
         </div>
