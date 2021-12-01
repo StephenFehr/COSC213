@@ -74,6 +74,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 }
 else
 {
+  $_SESSION["unauthorized"] = "User unauthorized, please try again.";
   header("Location: login.php");
   exit; 
 }
