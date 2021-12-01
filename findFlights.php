@@ -12,11 +12,11 @@
         $row = mysqli_fetch_array($result);
         $resultstr = "<h2> Flights from ".$row['p.model'].", Tail number: ".$row['plane_id']."</h2>";
         $resultstr .= "<pre>";
-        $resultstr .= sprintf("Flight Number\t\tDate\t\Pilot\t\t\f.plane_id\n");
+        $resultstr .= sprintf("Flight Number\t\tDate\tPilot\n");
         $resultstr .= sprintf("%'-55s\n","");
-        $resultstr .= sprintf("%s\t%s\t%s\n",$row['flight_id'], $row['schedule'], $row['pi.fname'], $row['plane_id']);
+        $resultstr .= sprintf("%s\t%s\t%s\n",$row['flight_id'], $row['schedule'], $row['pi.fname']." ".$row['pi.lname']);
         while ($row = mysqli_fetch_array($result)){
-            $resultstr .= sprintf("%s\t%s\t%s\n",$row['flight_id'], $row['schedule']);
+             $resultstr .= sprintf("%s\t%s\t%s\n",$row['flight_id'], $row['schedule'], $row['pi.fname']." ".$row['pi.lname']);
         } //while   
         $resultstr .= "</pre>";
         echo $resultstr;
