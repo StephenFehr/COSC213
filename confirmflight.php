@@ -11,7 +11,7 @@ $validEmail = filter_input(INPUT_POST, 'validEmail');
 $validPassword = filter_input(INPUT_POST, 'validPassword');
 
 //query database
-$sql = "SELECT email, password FROM users WHERE email = '".$validEmail."' AND password = SHA1('".$validPassword."')";
+$sql = "SELECT firstname, lastname, email, password FROM users WHERE email = '".$validEmail."' AND password = SHA1('".$validPassword."')";
 
 //get results from valid input query
 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
