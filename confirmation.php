@@ -1,3 +1,9 @@
+<?php
+if(isset($_POST["submit"]))
+{
+    $confirmation = "A confirmation email has been sent to ".$_SESSION["email"]."";
+}
+?>
 <!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -24,11 +30,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
         <!-- content -->
-      <?php
-      if(isset($_POST["submit"]))
-      {
-        $confirmation = "A confirmation email has been sent to ";
-      }
-      ?>
+        <h2><?php echo $confirmation; ?></h2>
     </body>
 </html>
