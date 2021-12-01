@@ -13,6 +13,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          $("#login").click(function(){
+            $("#error").text("Hello world!");
+          });
+        });
+        </script>
     </head>
     <body>
         <!-- header -->
@@ -24,6 +32,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <!-- content -->
         <br>
         <h2>Welcome, please sign in below to access content.</h2>
+        <h3 style="color: red;" id="error"></h3>
         <div>
             <form id="login" method="post" action="homepage.php">
                 <fieldset>
