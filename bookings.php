@@ -55,23 +55,28 @@
         <h2>Book a flight.</h2>
         <p style="color: red;"><strong>Please note that current COVID-19 travel restrictions may affect all flights and bookings.</strong></p>
         <div class="booking">
-            <form method="post" action="login.php">
-                
-                <button type="button" onclick="showPLanes()"> Air Craft </button>&nbsp;&nbsp;&nbsp;Find flights taken by Tail Number: 
-                <br>
-                <br>
-                <label for="airline"><strong>Select airline:</strong></label>
-                <select name="airline">
-                    <option>Ubuntu Air</option>
-                    <option>Apache Airlines</option>
-                    <option>Private Charter</option>
-                </select>
-                <p>&nbsp;&nbsp;</p>
-                <label for="date"><strong>Select date:</strong></label>
-                <input type="date" required>
-                <br><br>
-                <input type="submit" name="submit" value="Check Availability">
-            </form>
+            
+            <form>
+             <button type="button" onclick="showPLanes()"> Air Craft</button>&nbsp;&nbsp;&nbsp;Find flights taken by Tail Number: 
+            <?php
+             $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfield");  
+             $result=mysqli_query($mysqli, "SELECT model,plane_id FROM planes");
+             if(mysqli_num_rows($result)> 0){
+                $select= '<select name="plane_id" onchange="showFlights(this.value)">';
+                $select.='<option value="">Select a plane:</option>';
+                while($row=mysqli_fetch_array($result)){
+                    $select.='<option value="'.$row['model'].'">'.$row['plane_id'].'</option>';
+                }
+             mysqli_free_result($result);
+            mysqli_close($mysqli);
+            }
+            $select.='</select>';
+            echo $select;
+            ?>
+        </form>
+        <div id="planes"></div>
+        <div id="flights"></div>
+            
         </div>
     </body>
 </html>
