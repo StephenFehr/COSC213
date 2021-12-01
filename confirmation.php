@@ -1,8 +1,16 @@
 <?php
-echo $_SESSION["email"];
-if(isset($_POST["submit"]))
+session_start();
+if(filter_input(INPUT_COOKIE, "auth") == session_id())
 {
-    $confirmation = "A confirmation email has been sent to ".$_SESSION["email"]."";
+    if(isset($_POST["submit"]))
+    {
+        $confirmation = "A confirmation email has been sent to '.$_SESSION["email"].'";
+    }
+}
+else
+{
+    header("Location: payment.php")  ;
+    exit;
 }
 ?>
 <!DOCTYPE html>
