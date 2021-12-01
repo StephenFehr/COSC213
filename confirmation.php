@@ -1,4 +1,5 @@
 <?php
+echo $_SESSION["email"];
 if(isset($_POST["submit"]))
 {
     $confirmation = "A confirmation email has been sent to ".$_SESSION["email"]."";
