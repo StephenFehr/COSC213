@@ -9,7 +9,7 @@
                  }
     else {
         $row = mysqli_fetch_array($result);
-        $resultstr = "<h2> Flights from ".$row['pilot_id'].", Tail number: ".$row['plane_id']</h2>";
+        $resultstr = "<h2> Flights from ".$row['pilot_id'].", Tail number: ".$row['plane_id']."</h2>";
         $resultstr .= "<pre>";
         $resultstr .= sprintf("Flight Number\t\tDate\n");
         $resultstr .= sprintf("%'-55s\n","");
