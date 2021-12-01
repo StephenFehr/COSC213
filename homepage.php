@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION["invalid"]++;
 if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword')))
 {
   if($_SESSION["loggedin"] == false)
