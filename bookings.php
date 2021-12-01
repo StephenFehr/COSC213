@@ -46,7 +46,7 @@
             <a href="homepage.php">Home</a>
             <a href="features.php">Features</a>
             <a href="bookings.php" style="pointer-events: none;">Bookings</a>
-            <a href="logout.php">Logout</a>
+            <a href="login.html">Logout</a>
         </div>
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
         <!-- content -->
