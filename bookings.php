@@ -20,17 +20,17 @@
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
         <!-- content -->
         <h2>Book a flight.</h2>
-        <p style="color: red;">Please note that current COVID-19 travel restrictions may affect all flights and bookings.</p>
+        <p style="color: red;"><strong>Please note that current COVID-19 travel restrictions may affect all flights and bookings.</strong></p>
         <div class="booking">
             <form method="post" action="login.php">
-                <label for="airline">Select airline:</label>
+                <label for="airline"><strong>Select airline:</strong></label>
                 <select name="airline">
                     <option>Ubuntu Air</option>
                     <option>Apache Airlines</option>
                     <option>Private Charter</option>
                 </select>
                 <p>&nbsp;&nbsp;</p>
-                <label for="date">Select date:</label>
+                <label for="date"><strong>Select date:</strong></label>
                 <input type="date">
                 <br><br>
                 <input type="submit" name="submit" value="Check Availability">
