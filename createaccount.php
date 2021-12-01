@@ -74,9 +74,9 @@ if (mysqli_num_rows($result) == 1 && isset($_POST["submit"])) {
         <form name="form" method="post" action="<?php echo $PHP_SELF; ?>">
             <fieldset>
                 <legend><h3>User Information</h3></legend>
-                <p><strong>Firstname:</strong><br>
+                <p><strong>First name:</strong><br>
                     <input type="text" name="firstname" required></p>
-                <p><strong>Lastname:</strong><br>
+                <p><strong>Last name:</strong><br>
                     <input type="text" name="lastname" required></p>
                 <p><strong>Email:</strong><br>
                     <input type="email" name="email" required></p>
