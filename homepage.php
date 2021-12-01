@@ -1,6 +1,6 @@
 <?php
 session_start();
-if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword')))
+if((filter_input(INPUT_POST, 'validEmail')) || (filter_input(INPUT_POST, 'validPassword')))
 {
 
 //check database for valid email and password fields
