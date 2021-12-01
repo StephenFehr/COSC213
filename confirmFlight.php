@@ -34,6 +34,7 @@ else
   header("Location: login.php");
   exit;
 }
+$total;
 ?>
 <!DOCTYPE html>
 <!--
@@ -63,8 +64,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <!-- content -->
       <br>
       <h2><?php echo $authenticated; ?><h2>
-        <form>
-          
+      <br>
+      <h2>Total: <?php echo $total; ?></h2>
+        <form name="form" method="post" action="purchase">
+            <fieldset>
+              <div>
+                <legend><h3>Payment Information</h3></legend>
+                  <p><strong>Name on Card:</strong><br>
+                      <input type="text" name="fullName" required></p>
+                  <p><strong>Credit Card Number:</strong><br>
+                      <input type="text" name="cardNumber" required></p>
+                  <p><strong>Expiry:</strong><br>
+                      <input type="text" name="Expiry" required></p>
+                  <p><strong>CVV:</strong><br>
+                      <input type="text" name="cvv" required></p>               
+                  <p><input type="submit" name="submit" value="Continue to Checkout"></p>
+                </div>
+            </fieldset>
         </form>
     </body>
 </html>
