@@ -49,7 +49,7 @@ if (mysqli_num_rows($result) == 1) {
     echo '<h3>The email address "' . $email . '" is already in use, please try again.</h3>';
 } else {
     //connect to server and select database
-    $connect = new mysqli("localhost", "cs213user", "letmein", "testDB");
+    $connect = new mysqli("localhost", "cs213user", "letmein", "airfieldDB");
     if ($connect->connect_error) {
         die("Connection failed: " . $connect->connect_error);
     }
@@ -57,9 +57,8 @@ if (mysqli_num_rows($result) == 1) {
     //make a user directory and store user in database
     $sql = "INSERT INTO members VALUES ('$username', $email', SHA1('$password'))";
     if ($connect->query($sql) == true && isset($_POST['submit'])) {
-        echo $emailOK;
         echo '<h3>Your account "' . $email . '" has been created. Thank you for joining us!</h3>';
-        echo '<a href="lottoLogin.html">Go to Login</a>';
+        echo '<a href="bookings.php">Go To Bookings</a>';
     }
 }
 ?>
