@@ -31,7 +31,7 @@
                 </select>
                 <p>&nbsp;&nbsp;</p>
                 <label for="date"><strong>Select date:</strong></label>
-                <input type="date">
+                <input type="date" required>
                 <br><br>
                 <input type="submit" name="submit" value="Check Availability">
             </form>
