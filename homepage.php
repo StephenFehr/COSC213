@@ -72,4 +72,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </body>
 </html>';
 }
+else
+{
+  header("Location: login.php");
+  exit; 
+}
 ?>
