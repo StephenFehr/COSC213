@@ -1,5 +1,5 @@
 <?php
-if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword')))
+if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword')) && $_SESSION["loggedin"] == false)
 {
   header("Location: login.html");
   exit;
