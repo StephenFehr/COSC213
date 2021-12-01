@@ -3,8 +3,8 @@
     $id = $_GET["PlaneID"];
     echo "<p> id value: ".$id."</p><br>";
     $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfield");
-    $sql = "SELECT * FROM flights f, planes p, pilots pi 
-			WHERE p.plane_id = f.plane_id AND pi.pilot_id = f.pilot_id AND f.plane_id = '".$id."'";
+    $sql = "SELECT * FROM flights f, planes p, pilots pi WHERE p.plane_id = f.plane_id AND pi.pilot_id = f.pilot_id AND f.plane_id = '".$id."'";
+    echo "<p>".$sql."</p>";
     $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
                
     if (mysqli_num_rows($result)< 1){
