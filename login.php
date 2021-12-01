@@ -17,7 +17,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <script>
         $(document).ready(function(){
           $("#login").click(function(){
-            $("#error").text("Hello world!");
+            $("#error").text("User unauthorized, please try again.");
           });
         });
         </script>
