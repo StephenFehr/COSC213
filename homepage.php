@@ -53,7 +53,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
         <h1><i><Strong>Ubuntu Regional Airport</strong></i></h1>
         <div class="header">
-            <a>Home</a>
+            <a href="homepage.php" style="pointer-events: none;">Home</a>
             <a href="features.php">Features</a>
             <a href="bookings.php">Bookings</a>
             <a href="login.html">Logout</a>
