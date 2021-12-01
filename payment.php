@@ -20,9 +20,11 @@ if(mysqli_num_rows($result) == 1){
   //get user information
   while($info = mysqli_fetch_array($result))
   {
+    $email = stripslashes($info["email"]);
     $firstname = stripslashes($info["firstname"]);
     $lastname = stripslashes($info["lastname"]);
   }
+  $_SESSION["email"] = $email;
   $_SESSION["auth_user"] = $firstname." ".$lastname;
   $authenticated = "Welcome ".$_SESSION["auth_user"].", please confirm your purchase details.";
   
