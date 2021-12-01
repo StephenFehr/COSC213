@@ -13,6 +13,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <body>
         <!-- header -->
         <div class="logo">
+            <h1>Welcome, please sign in to access content<h1>
             <img src="images/logo.png" alt="Logo" style="width: 400px; height: 100px;">
         </div>
         <h1><i><Strong>Ubuntu Regional Airport</strong></i></h1>
@@ -26,7 +27,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <form method="post" action="homepage.php">
                 <fieldset>
                     <legend><h3>User Information</h3></legend>
-                    <h4 style="color: red;"><?php echo $error; ?></h4>
                     <label for="validEmail"><strong>Email:</strong></label>
                     <input type="email" name="validEmail">
                     <label for="validPassword"><strong>Password:</strong></label>
