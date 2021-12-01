@@ -13,10 +13,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <body>
         <!-- header -->
         <div class="logo">
-            <h1>Welcome, please sign in to access content<h1>
             <img src="images/logo.png" alt="Logo" style="width: 400px; height: 100px;">
         </div>
         <h1><i><Strong>Ubuntu Regional Airport</strong></i></h1>
+        <div id="headerMessage">
+            <h1>Welcome, please sign in to access content<h1>
+        </div>
         <div class="header">
         </div>
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
