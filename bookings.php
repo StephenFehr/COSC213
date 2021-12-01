@@ -57,7 +57,7 @@
         <div class="booking">
             <form method="post" action="login.php">
                 
-                <button type="button" onclick="showPLanes()"> Air Craft </button> 
+                <button type="button" onclick="showPLanes()"> Air Craft </button>&nbsp;&nbsp;&nbsp;Find flights taken by Tail Number: 
                 <br>
                 <br>
                 <label for="airline"><strong>Select airline:</strong></label>
