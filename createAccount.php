@@ -55,7 +55,7 @@ if (mysqli_num_rows($result) == 1 && isset($_POST["create_account"])) {
     //make a user directory and store user in database
     $sql = "INSERT INTO users VALUES ('$firstname', '$lastname', '$email', SHA1('$password'))";
     if ($connect->query($sql) == true && isset($_POST['create_account'])) {
-        echo '<h3>Thank you '.$firstname.' '.$lastname.', your account ' . $email . ' has been created. Please login to book a flight.</h3>';
+        echo '<h2>Thank you '.$firstname.' '.$lastname.', your account ' . $email . ' has been created. Please login to book a flight.</h2>';
         echo '<a href="login.html">Go To Login</a>';
     }
 }
