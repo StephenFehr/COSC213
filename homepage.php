@@ -29,10 +29,17 @@ if(mysqli_num_rows($result) == 1){
 }
 else
 {
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          $("#login").click(function(){
+            $("#error").text("User is unauthorized, please try again.");
+          });
+        });
+        </script>
   header("Location: login.html");
   exit;
 }
-$total;
 ?>
 <!DOCTYPE html>
 <!--
@@ -41,14 +48,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html>
     <head>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-        $(document).ready(function(){
-          $("#login").click(function(){
-            $("#error").text("User is unauthorized, please try again.");
-          });
-        });
-        </script>
         <title>DNS Airfield</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
