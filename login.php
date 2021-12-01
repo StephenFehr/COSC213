@@ -43,9 +43,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <fieldset>
                     <legend><h3>User Login</h3></legend>
                     <label for="validEmail"><strong>Email:</strong></label>
-                    <input type="email" name="validEmail">
+                    <input type="email" name="validEmail" required>
                     <label for="validPassword"><strong>Password:</strong></label>
-                    <input type="password" name="validPassword">
+                    <input type="password" name="validPassword" required>
                     <input type="submit" id="login" name="submit" value="Login">
                 </form>
                 <br><br>
