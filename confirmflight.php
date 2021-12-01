@@ -16,7 +16,18 @@ $sql = "SELECT email, password FROM users WHERE email = '".$validEmail."' AND pa
 //get results from valid input query
 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 if(mysqli_num_rows($result) == 1){
-  $authenticated = "User Authenticated";
+  
+  //get user information
+  while($info = mysqli_fetch_array($result))
+  {
+    $firstname = stripslashes($info["firstname"]);
+    $lastname = stripslashes($info["lastname"]);
+  }
+  $_SESSION["auth_user"] = "$firstname $lastname";
+  $authenticated = "Welcome '.$_SESSION["auth_user"].'";
+  
+  //set authorization cookie
+  setcookie("auth", session_id(), time() + 60 * 30, "/", "", 0);
 }
 else
 {
