@@ -20,7 +20,7 @@ $sql = "SELECT firstname, lastname, email, password FROM users WHERE email = '".
 
 //get results from valid input query
 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
-if(mysqli_num_rows($result) == 1){
+if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1){
 
   //get user information
   while($info = mysqli_fetch_array($result))
