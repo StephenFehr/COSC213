@@ -74,12 +74,12 @@ if (mysqli_num_rows($result) == 1 && isset($_POST["submit"])) {
             <fieldset>
                 <legend><h3>User Information</h3></legend>
                 <p><strong>Username:</strong><br>
-                    <input type="text" name="username" required/></p>
+                    <input type="text" name="username"></p>
                 <p><strong>Email:</strong><br>
-                    <input type="email" name="email" required/></p>
+                    <input type="email" name="email" required></p>
                 <p><strong>Password:</strong><br>
-                    <input type="password" name="password" required/></p>
-                <p><input type="submit" name="submit" value="Create Account"/></p>
+                    <input type="password" name="password" required></p>
+                <p><input type="submit" name="submit" value="Create Account"></p>
             </fieldset>
         </form>
     </body>
