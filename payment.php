@@ -24,7 +24,7 @@ if(mysqli_num_rows($result) == 1){
     $lastname = stripslashes($info["lastname"]);
   }
   $_SESSION["auth_user"] = $firstname." ".$lastname;
-  $authenticated = "Welcome ".$_SESSION["auth_user"].", please confirm your flight details.";
+  $authenticated = "Welcome ".$_SESSION["auth_user"].", please confirm your purchase details.";
   
   //set authorization cookie
   setcookie("auth", session_id(), time() + 60 * 30, "/", "", 0);
@@ -43,7 +43,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html>
     <head>
-        <title>Confirm Flight</title>
+        <title>Payment</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
@@ -66,7 +66,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
       <h2><?php echo $authenticated; ?><h2>
       <br>
       <h2>Total: <?php echo $total; ?></h2>
-        <form name="form" method="post" action="purchase">
+        <form name="form" method="post" action="confirmation.php">
           <div>
             <fieldset>
                 <legend><h3>Payment Information</h3></legend>
