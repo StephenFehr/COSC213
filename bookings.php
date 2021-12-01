@@ -57,6 +57,7 @@
             <form>
              <button type="button" onclick="showPlanes()"> Air Craft</button>&nbsp;&nbsp;&nbsp;Find flights taken by Tail Number: 
             <?php
+             $_SESSION["loggedin"] = true;
              $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfield");  
              $result=mysqli_query($mysqli, "SELECT model,plane_id FROM planes");
              if(mysqli_num_rows($result)> 0){
