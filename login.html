@@ -21,18 +21,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <br>
         <h2>Welcome, please sign in below to access content.</h2>
         <div>
-            <form method="post" action="homepage.php">
+            <form id="login" method="post" action="homepage.php">
                 <fieldset>
                     <legend><h3>User Login</h3></legend>
                     <label for="validEmail"><strong>Email:</strong></label>
                     <input type="email" name="validEmail">
                     <label for="validPassword"><strong>Password:</strong></label>
                     <input type="password" name="validPassword">
-                    <input type="submit" name="submit" value="Login">
+                    <input id="submit" type="submit" name="submit" value="Login">
                 </form>
                 <br><br>
                 <a href="createAccount.php">Create Account</a>
             </fieldset>
         </div>
+        <script>
+        $('submit').click(function(){
+ alert('Please wait while form is submitting');
+ $('#login').submit();
+});
+        </script>
     </body>
 </html>
