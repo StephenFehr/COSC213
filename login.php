@@ -21,11 +21,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
         <!-- content -->
         <br>
+        <h3><?php echo $message; ?><h3>
         <div>
             <form method="post" action="homepage.php">
                 <fieldset>
                     <legend><h3>User Information</h3></legend>
-                    <h3><?php echo $message; ?><h3>
                     <h4 style="color: red;"><?php echo $error; ?></h4>
                     <label for="validEmail"><strong>Email:</strong></label>
                     <input type="email" name="validEmail">
@@ -33,7 +33,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <input type="password" name="validPassword">
                     <input type="submit" name="submit" value="Login">
                 </form>
-                <br>
+                <br><br>
                 <a href="createAccount.php">Create Account</a>
             </fieldset>
         </div>
