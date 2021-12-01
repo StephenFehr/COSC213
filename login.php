@@ -6,9 +6,6 @@
 session_start();
 if (isset($_POST["submit"])) {
     $message = "Flight is available for booking. Please log in or create account to confirm booking.";  
-} else {
-    header("Location: login.php");
-    exit;
 }
 ?>
 <!DOCTYPE html>
