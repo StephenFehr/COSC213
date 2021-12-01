@@ -63,5 +63,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <!-- content -->
       <br>
       <h2><?php echo $authenticated; ?><h2>
+        <form>
+          
+        </form>
     </body>
 </html>
