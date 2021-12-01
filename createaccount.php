@@ -27,13 +27,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div>
 <?php
 session_start();
-$firstname = $_POST['firstname'];
-$lastname = $_POST['lastname'];
+$username = $_POST['username'];
 $email = strtolower($_POST['email']);
 $password = $_POST['password'];
-$age = $_POST['age'];
-$gender = $_POST['gender'];
-$date = date('Y-m-d');
 $form = true;
 $path = "/var/www/html/uploaddir/$email";
 
