@@ -29,7 +29,6 @@ if(mysqli_num_rows($result) == 1){
 }
 else
 {
-  $_SESSION["unauthorized"] = "User is unauthorized, please try again";
   header("Location: login.html");
   exit;
 }
