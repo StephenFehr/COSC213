@@ -29,14 +29,7 @@ if(mysqli_num_rows($result) == 1){
 }
 else
 {
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-        $(document).ready(function(){
-          $("#login").click(function(){
-            $("#error").text("User is unauthorized, please try again.");
-          });
-        });
-        </script>
+  $_POST["unauthorized"] = "User is unauthorized, please try again.";
   header("Location: login.html");
   exit;
 }
