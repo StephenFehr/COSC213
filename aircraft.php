@@ -12,10 +12,13 @@
             }, function () {
               $(this).animate({opacity: 1.0}, 500);
               }, function () {
-                $(this).text("Cessna 150");
-              });
            });
         });
+           $(document).ready(function(){
+             $("#cessna").hover(function(){
+               $("p").text("Cessna 150");
+             });
+           });
         </script> 
     </head>
     <body>
