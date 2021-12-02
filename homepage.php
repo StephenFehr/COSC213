@@ -27,6 +27,10 @@ if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1)
 }
 else
 {
+  if(isset($_POST["submit"]) && $_SESSION["loggedin"] == false)
+  {
+    $_SESSION["unauthorized"] = "User unauthorized, please try again or create account.";
+  }
     header("Location: login.php");
     exit; 
 }
