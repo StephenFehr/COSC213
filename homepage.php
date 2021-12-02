@@ -31,6 +31,10 @@ else
   {
     $_SESSION["unauthorized"] = "User unauthorized, please try again or create account.";
   }
+  else
+  {
+     $_SESSION["unauthorized"] = "";
+  }
     header("Location: login.php");
     exit; 
 }
