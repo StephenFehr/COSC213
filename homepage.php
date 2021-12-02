@@ -2,7 +2,6 @@
 session_start();
 if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword')))
 {
-  $_SESSION["unauthorized"] = "User unauthorized, please try again.";
   if($_SESSION["loggedin"] == false)
   {
     //$_SESSION["unauthorized"] = "User unauthorized, please try again.";
