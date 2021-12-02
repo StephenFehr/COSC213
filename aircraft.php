@@ -16,7 +16,7 @@
         });
            $(document).ready(function(){
              $("#cessna").hover(function(){
-               $("p").text("Cessna 150");
+               $("#plane1").text("Cessna 150");
              });
            });
         </script> 
@@ -37,7 +37,7 @@
         <!-- content -->
         <h2>Featured Aircraft.</h2>
         <div class="aircraft">
-            <p></p>
+            <h2 class="plane1"></h2>
             <img id="cessna" src="images/cessna150.jpeg" alt="Cessna 150 Airplane Image" style="width: 500px; height: 400px;">
             <img id="harbin" src="images/harbinY12.jpg" alt="Harbin Y12 Airplane Image" style="width: 500px; height: 400px;">
             <img id="nomad" src="images/gafNomad.jpg" alt="GAF Nomad Aiplane Image" style="width: 500px; height: 400px;">
