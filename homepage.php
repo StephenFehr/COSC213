@@ -8,10 +8,6 @@ if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'vali
     exit;
   }
 }
-if($_SESSION["loggedin"] == false)
-{
-  $_SESSION["loggedin"] == true;
-}
 
 //check database for valid email and password fields
 $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfieldDB");
