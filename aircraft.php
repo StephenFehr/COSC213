@@ -9,9 +9,9 @@
         <script> 
         $(document).ready(function(){
           $("#cessna").hover(function(){
-            $(this).animate({opacity: 0.5}, 100);
+            $(this).css({opacity: 0.5}, 500);
             }, function () {
-              $(this).animate({opacity: 1.0}, 100);
+              $(this).css({opacity: 1.0}, 500);
            });
         });
            $(document).ready(function(){
