@@ -12,7 +12,7 @@
             }, function () {
               $(this).animate({opacity: 1.0}, 500);
               }, function () {
-                $("p").text("Cessna 150");
+                $(this).text("Cessna 150");
               });
            });
         });
