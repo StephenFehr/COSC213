@@ -31,7 +31,7 @@ if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1)
     }
 else
 {
-    if($_SESSION["loggedin"] == false)
+    if(isset($_POST["submit"]) && $_SESSION["loggedin"] == false)
     {
       $_SESSION["unauthorized"] = "Unauthorized, please sign in or create account.";
     }
