@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script> 
+        <script>
+        //Cessna 150
         $(document).ready(function(){
           $("#cessna").hover(function(){
             $(this).css({opacity: 0.5}, 500);
@@ -21,6 +22,42 @@
            });
            $(document).ready(function(){
              $("#cessna").mouseleave(function(){
+               $("#plane").text("");
+             });
+           });
+           //Harbin Y-12
+           $(document).ready(function(){
+          $("#harbin").hover(function(){
+            $(this).css({opacity: 0.5}, 500);
+            }, function () {
+              $(this).css({opacity: 1.0}, 500);
+           });
+        });
+           $(document).ready(function(){
+             $("#harbin").hover(function(){
+               $("#plane").text("Harbin Y-12");
+             });
+           });
+           $(document).ready(function(){
+             $("#harbin").mouseleave(function(){
+               $("#plane").text("");
+             });
+           });
+           //GAF Nomad
+           $(document).ready(function(){
+          $("#nomad").hover(function(){
+            $(this).css({opacity: 0.5}, 500);
+            }, function () {
+              $(this).css({opacity: 1.0}, 500);
+           });
+        });
+           $(document).ready(function(){
+             $("#nomad").hover(function(){
+               $("#plane").text("GAF Nomad");
+             });
+           });
+           $(document).ready(function(){
+             $("#nomad").mouseleave(function(){
                $("#plane").text("");
              });
            });
