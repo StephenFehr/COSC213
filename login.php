@@ -32,7 +32,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <legend><h3>User Login</h3></legend>
                     <label for="validEmail"><strong>Email:</strong></label>
                     <input type="email" name="validEmail" required>
-                    <?php $_SESSION["validEmail"]; ?>
                     <label for="validPassword"><strong>Password:</strong></label>
                     <input type="password" name="validPassword" required>
                     <input type="submit" name="submit" value="Login">
