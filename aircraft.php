@@ -1,3 +1,4 @@
+<?php $_SESSION["loggedin"] = true; ?>
 <html>
     <head>
         <title>Featured Aircraft</title>
