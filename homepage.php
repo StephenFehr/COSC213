@@ -74,8 +74,11 @@ if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1){
 }
 else
 {
-  //$_SESSION["unauthorized"] = "User unauthorized, please try again.";
-  header("Location: login.php");
-  exit; 
+  if(isset($_POST["submit"]))
+  {
+    $_SESSION["unauthorized"] = "User unauthorized, please try again.";
+  }
+    header("Location: login.php");
+    exit; 
 }
 ?>
