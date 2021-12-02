@@ -4,33 +4,36 @@ $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
 $email = strtolower($_POST['email']);
 $password = $_POST['password'];
+if(isset($_POST["create_account"]))
+{
 
-//connect to server and select database
-$mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfieldDB");
-
-//create and issue the query
-$targetemail = filter_input(INPUT_POST, 'email');
-$sql = "SELECT email FROM users WHERE email = '$targetemail'";
-
-$result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
-
-//get the number of rows in the result set; should be 1 if a match
-if (mysqli_num_rows($result) == 1 && isset($_POST["create_account"])) {
-
-    //email is already used message
-    echo '<h3>The email address ' . $email . ' is already in use, please try again.</h3>';
-} else {
     //connect to server and select database
-    $connect = new mysqli("localhost", "cs213user", "letmein", "airfieldDB");
-    if ($connect->connect_error) {
-        die("Connection failed: " . $connect->connect_error);
-    }
+    $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfieldDB");
 
-    $sql = "INSERT INTO users VALUES ('$firstname', '$lastname', '$email', SHA1('$password'))";
-    
-    if ($connect->query($sql) == true && isset($_POST['create_account'])) {
-        echo '<h2>Thank you '.$firstname.' '.$lastname.', your account ' . $email . ' has been created. Please login to book a flight.</h2>';
-        echo '<a href="login.php">Go To Login</a>';
+    //create and issue the query
+    $targetemail = filter_input(INPUT_POST, 'email');
+    $sql = "SELECT email FROM users WHERE email = '$targetemail'";
+
+    $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
+
+    //get the number of rows in the result set; should be 1 if a match
+    if (mysqli_num_rows($result) == 1 && isset($_POST["create_account"])) {
+
+        //email is already used message
+        echo '<h3>The email address ' . $email . ' is already in use, please try again.</h3>';
+    } else {
+        //connect to server and select database
+        $connect = new mysqli("localhost", "cs213user", "letmein", "airfieldDB");
+        if ($connect->connect_error) {
+            die("Connection failed: " . $connect->connect_error);
+        }
+
+        $sql = "INSERT INTO users VALUES ('$firstname', '$lastname', '$email', SHA1('$password'))";
+
+        if ($connect->query($sql) == true && isset($_POST['create_account'])) {
+            echo '<h2>Thank you '.$firstname.' '.$lastname.', your account ' . $email . ' has been created. Please login to book a flight.</h2>';
+            echo '<a href="login.php">Go To Login</a>';
+        }
     }
 }
 ?>
