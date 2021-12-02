@@ -33,7 +33,6 @@ else
     header("Location: login.php");
     exit; 
 }
-?>
 $page = '<html>
     <head>
         <title>Featured Aircraft</title>
@@ -121,3 +120,4 @@ $page = '<html>
         </div>
     </body>
 </html>';
+?>
