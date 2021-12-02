@@ -67,8 +67,7 @@ if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1){
           </div>
           <div>
             <?php
-                mysqli_free_result($result);
-                mysqli_close($mysqli);
+               
     
                 $col = array("Flight ID", "Model", "Departure");
                 $numcol = count($col);
