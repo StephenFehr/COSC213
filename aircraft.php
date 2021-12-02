@@ -17,9 +17,6 @@
            $(document).ready(function(){
              $("#cessna").hover(function(){
                $("#plane1").text("Cessna 150");
-                 }, function () {
-                 $("#plane1").hide();
-               });
              });
            });
         </script> 
