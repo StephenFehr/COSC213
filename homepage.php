@@ -4,6 +4,11 @@ if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'vali
 {
   if($_SESSION["loggedin"] == false)
   {
+    if(isset($_POST["submit"]) == true)
+    {
+      $_SESSION["unauthorized"] = "User unauthorized, please try again or create account.";
+      $_POST["submit"] == false;
+    }
     header("Location: login.php");
     exit;
   }
@@ -33,10 +38,6 @@ $_SESSION["auth_user"] = $firstname." ".$lastname;
 }
 else
 {
-  if(isset($_POST["submit"]))
-  {
-    $_SESSION["unauthorized"] = "User unauthorized, please try again or create account.";
-  }
     header("Location: login.php");
     exit; 
 }
