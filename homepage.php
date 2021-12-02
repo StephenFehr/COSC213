@@ -65,9 +65,41 @@ if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1){
                   The airfield houses 5 hangar bays and a small terminal. 
                   DNS Airfield accepts both private and commercial aviation in classes of fixed wing and rotary aircraft.</p>
           </div>
-          <div class="schedule">
-              <p id="arrivals">Arrivals</p>
-              <p id="departures">Departures</p>
+          <div class="schedule">'
+                $DBName = "airfield";
+                $TableName = "flights";
+                $col = array("Flight ID", "Model", "Departure");
+                $numcol = count($col);
+
+                //connect to server and select database
+                $mysqli = mysqli_connect("localhost", "cs213user", "letmein", $DBName);
+
+                $sql = "SELECT f.flight_id, p.model, f.schedule FROM flights f, planes p WHERE p.plane_id = f.plane_id AND f.schedule < (curdate() + 7)";
+            
+            $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
+
+            //get the number of rows in the result set; should be 1 if a match
+            if (mysqli_num_rows($result) < 1) {
+                echo "<p> No Upcoming Flights </p>";
+                } else {
+
+                echo "<h2> Upcoming Flights: </h2>";
+
+                echo "<table><tr>";
+                for ($i = 0; $i < count($col); $i++) {
+                    echo "<th>" . $col[$i];
+                }
+                echo "</tr>";
+                while ($row = mysqli_fetch_array($result)) {
+                    for ($i = 0; $i < count($col); $i++) {
+                        echo"<td>" . $row[$i];
+                    }
+                    echo "</tr>";
+                } //while
+            }
+
+            echo '</table>
+        
           </div>
       </body>
   </html>';
