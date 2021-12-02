@@ -80,15 +80,20 @@ body {
     display: inline-block;
 }
 
-table {
+tr, td, th {
+    color: darkblue;
     border-style: inset;
     border-width: 2px;
     text-align: center;
     border-spacing: 2px;
-    padding: 2px;
-    font-weight: bold;
-    border: 2px solid black;
-    width: 60%;
+    padding: 10px;
+}
+
+th {
+ font-weight: bold;   
+}
+
+table {
+    border-style: outset;
     border-width: 2px;
-    border-collapse: collapse;
 }
