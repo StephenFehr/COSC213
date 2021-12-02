@@ -77,7 +77,7 @@
         </div>
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
         <!-- content -->
-        <h2 class="aircraftType">Featured Aircraft.</h2>
+        <h2 class="aircraftType">Featured Aircraft:</h2>
         <h2 id="plane" class="aircraftType"></h2>
         <div class="aircraft">
             <img id="cessna" src="images/cessna150.jpeg" alt="Cessna 150 Airplane Image" style="width: 500px; height: 400px;">
