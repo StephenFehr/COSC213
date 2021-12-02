@@ -1,10 +1,5 @@
 <?php
 session_start();
-if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword')))
-{
-    header("Location: login.php");
-    exit;
-}
 
 //check database for valid email and password fields
 $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfieldDB");
