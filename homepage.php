@@ -1,6 +1,6 @@
 <?php
 session_start();
-if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword')) || ($_SESSION["loggedin"] == false))
+if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword')))
 {
     header("Location: login.php");
     exit;
