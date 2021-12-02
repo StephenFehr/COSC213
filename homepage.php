@@ -1,12 +1,9 @@
 <?php
 session_start();
-if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword')))
+if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword') || ($_SESSION["loggedin"] == false))
 {
-  if($_SESSION["loggedin"] == false)
-  {
     header("Location: login.php");
     exit;
-  }
 }
 
 //check database for valid email and password fields
