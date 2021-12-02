@@ -8,7 +8,7 @@ if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'vali
     exit;
   }
 }
-$_SESSION["loggedin"] = true;
+
 //check database for valid email and password fields
 $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfieldDB");
 $validEmail = filter_input(INPUT_POST, 'validEmail');
@@ -19,8 +19,9 @@ $sql = "SELECT firstname, lastname, email, password FROM users WHERE email = '".
 
 //get results from valid input query
 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
-if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1)
+if(mysqli_num_rows($result) == 1)
 {
+  $_SESSION["loggedin"] = true;
   //get user information
   while($info = mysqli_fetch_array($result))
   {
