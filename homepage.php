@@ -7,8 +7,6 @@ if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'vali
     header("Location: login.php");
     exit;
   }
-  else
-    $_SESSION["loggedin"] = true;
 }
 
 //check database for valid email and password fields
