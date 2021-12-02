@@ -65,12 +65,12 @@ if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1){
                   The airfield houses 5 hangar bays and a small terminal. 
                   DNS Airfield accepts both private and commercial aviation in classes of fixed wing and rotary aircraft.</p>
           </div>
-          
-				
-		
-
+          <div class="schedule">
+              <p id="arrivals">Arrivals</p>
+              <p id="departures">Departures</p>
+          </div>
       </body>
-  </html>
+  </html>';
 }
 else
 {
