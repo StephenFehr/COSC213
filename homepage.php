@@ -7,13 +7,17 @@ if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'vali
     header("Location: login.php");
     exit;
   }
+  else
+  {
+    $_SESSION["loggedin"] = true;
+  }
 }
 
 //check database for valid email and password fields
 $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfieldDB");
 $validEmail = filter_input(INPUT_POST, 'validEmail');
 $validPassword = filter_input(INPUT_POST, 'validPassword');
-$_SESSION["loggedin"] = true;
+
 //query database
 $sql = "SELECT firstname, lastname, email, password FROM users WHERE email = '".$validEmail."' AND password = SHA1('".$validPassword."')";
 
@@ -30,11 +34,6 @@ if($_SESSION["loggedin"] = true || mysqli_num_rows($result) == 1)
   }
 $_SESSION["email"] = $email;
 $_SESSION["auth_user"] = $firstname." ".$lastname;
-}
-else
-{
-    header("Location: login.php");
-    exit; 
 }
 ?>
 
