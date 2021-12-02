@@ -11,7 +11,10 @@
             $(this).animate({opacity: 0.5}, 500);
             }, function () {
               $(this).animate({opacity: 1.0}, 500);
-          });
+              }, function () {
+                $("p").text("Cessna 150");
+              });
+           });
         });
         </script> 
     </head>
@@ -31,6 +34,7 @@
         <!-- content -->
         <h2>Featured Aircraft.</h2>
         <div class="aircraft">
+            <p></p>
             <img id="cessna" src="images/cessna150.jpeg" alt="Cessna 150 Airplane Image" style="width: 500px; height: 400px;">
             <img id="harbin" src="images/harbinY12.jpg" alt="Harbin Y12 Airplane Image" style="width: 500px; height: 400px;">
             <img id="nomad" src="images/gafNomad.jpg" alt="GAF Nomad Aiplane Image" style="width: 500px; height: 400px;">
