@@ -30,7 +30,18 @@ if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1){
   }
   $_SESSION["email"] = $email;
   $_SESSION["auth_user"] = $firstname." ".$lastname;
-  ?>
+  }
+}
+else
+{
+  if(isset($_POST["submit"]))
+  {
+    $_SESSION["unauthorized"] = "User unauthorized, please try again or create account.";
+  }
+    header("Location: login.php");
+    exit; 
+}
+?>
 
   <!DOCTYPE html>
   <!--
@@ -97,15 +108,3 @@ if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1){
 
       </body>
   </html>
-<?php
-}
-else
-{
-  if(isset($_POST["submit"]))
-  {
-    $_SESSION["unauthorized"] = "User unauthorized, please try again or create account.";
-  }
-    header("Location: login.php");
-    exit; 
-}
-?>
