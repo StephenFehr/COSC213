@@ -22,7 +22,7 @@ $sql = "SELECT firstname, lastname, email, password FROM users WHERE email = '".
 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 if($_SESSION["email"])
 {
- echo $form;
+ echo $page;
 }
 else
 {
