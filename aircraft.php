@@ -19,6 +19,11 @@
                $("#plane1").text("Cessna 150");
              });
            });
+           $(document).ready(function(){
+             $("#cessna").mouseleave(function(){
+               $("#plane1").text("");
+             });
+           });
         </script> 
     </head>
     <body>
