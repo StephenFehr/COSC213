@@ -30,6 +30,11 @@ if( mysqli_num_rows($result) == 1)
   $_SESSION["email"] = $email;
   $_SESSION["auth_user"] = $firstname." ".$lastname;
 }
+else
+{
+    header("Location: login.php");
+    exit; 
+}
 ?>
 
   <!DOCTYPE html>
