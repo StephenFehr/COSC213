@@ -32,7 +32,7 @@ if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1){
   $_SESSION["email"] = $email;
   $_SESSION["auth_user"] = $firstname." ".$lastname;
 
-  echo <!DOCTYPE html>
+  echo '<!DOCTYPE html>
   <!--
   Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
   Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
@@ -65,7 +65,7 @@ if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1){
                   The airfield houses 5 hangar bays and a small terminal. 
                   DNS Airfield accepts both private and commercial aviation in classes of fixed wing and rotary aircraft.</p>
           </div>
-          <?php
+          
 				$DBName = "airfield";
 				$TableName = "flights";
 				$col = array("Flight ID", "Model", "Departure");
@@ -99,7 +99,7 @@ if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1){
 			}
 			
 			echo "</table>";
-		?>
+		
 
       </body>
   </html>
