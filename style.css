@@ -49,14 +49,6 @@ body {
     height: 50%;
 }
 
-#aircraft {
-    display: inline;   
-}
-
-#plane {
-    display: inline;   
-}
-
 .schedule p {
     display: inline-block;
 }
