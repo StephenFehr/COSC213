@@ -27,14 +27,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         
         <h3 style="color: red;"><?php echo $_SESSION["unauthorized"]; ?></h3>
         <div>
-            <form id="login" method="post" action="homepage.php">
+            <form method="post" action="homepage.php">
                 <fieldset>
                     <legend><h3>User Login</h3></legend>
                     <label for="validEmail"><strong>Email:</strong></label>
                     <input type="email" name="validEmail" required>
                     <label for="validPassword"><strong>Password:</strong></label>
                     <input type="password" name="validPassword" required>
-                    <input type="submit" id="login" name="submit" value="Login">
+                    <input type="submit" name="submit" value="Login">
                 </form>
                 <br><br>
                 <a href="createAccount.php">Create Account</a>
