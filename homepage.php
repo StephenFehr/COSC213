@@ -108,7 +108,7 @@ else
 {
   if(isset($_POST["submit"]))
   {
-    $_SESSION["unauthorized"] = "User unauthorized, please try again.";
+    $_SESSION["unauthorized"] = "User unauthorized, please try again or create account.";
   }
     header("Location: login.php");
     exit; 
