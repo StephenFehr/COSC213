@@ -57,7 +57,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 $sql = "INSERT INTO users VALUES ('$firstname', '$lastname', '$email', SHA1('$password'))";
 
                 if ($connect->query($sql) == true) {
-                    echo '<h2>Thank you '.$firstname.' '.$lastname.', your account ' . $email . ' has been created. Please login to book a flight.</h2>';
+                    echo '<h2>Thank you '.$firstname.' '.$lastname.', your account ' . $email . ' has been created. Please login to access content.</h2>';
                     echo '<a href="login.php">Go To Login</a>';
                 }
             }
