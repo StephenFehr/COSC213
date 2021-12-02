@@ -24,8 +24,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <!-- content -->
         <br>
         <h2>Welcome, please sign in below to access content.</h2>
-        
-        <h3 style="color: red;"><?php echo $_SESSION["unauthorized"]; ?></h3>
         <div>
             <form method="post" action="homepage.php">
                 <fieldset>
