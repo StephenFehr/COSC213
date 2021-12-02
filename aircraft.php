@@ -12,7 +12,6 @@
             $(this).animate({opacity: 0.5}, 500);
             }, function () {
               $(this).animate({opacity: 1.0}, 500);
-              }, function () {
            });
         });
            $(document).ready(function(){
