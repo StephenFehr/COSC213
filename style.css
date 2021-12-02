@@ -79,3 +79,16 @@ body {
 .booking #formA #formB {
     display: inline-block;
 }
+
+table {
+    border-style: inset;
+    border-width: 2px;
+    text-align: center;
+    border-spacing: 2px;
+    padding: 2px;
+    font-weight: bold;
+    border: 2px solid black;
+    width: 60%;
+    border-width: 2px;
+    border-collapse: collapse;
+}
