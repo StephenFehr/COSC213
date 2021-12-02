@@ -1,7 +1,3 @@
-<?php
-
-
-?>
 <html>
     <head>
         <title>Featured Aircraft</title>
@@ -24,7 +20,7 @@
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
         <!-- content -->
         <h2>Featured Aircraft.</h2>
-        <div>
+        <div class="airplanes">
             <img class="aircraft" src="images/cessna150.jpeg" alt="Cessna 150 Airplane Image" style="width: 500px; height: 400px;">
             <img class="aircraft" src="images/harbinY12.jpg" alt="Harbin Y12 Airplane Image" style="width: 500px; height: 400px;">
             <img class="aircraft" src="images/gafNomad.jpg" alt="GAF Nomad Aiplane Image" style="width: 500px; height: 400px;">
