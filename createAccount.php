@@ -52,7 +52,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 if ($connect->connect_error) {
                     die("Connection failed: " . $connect->connect_error);
                 }
-
+                
+                //insert new account information into users database
                 $sql = "INSERT INTO users VALUES ('$firstname', '$lastname', '$email', SHA1('$password'))";
 
                 if ($connect->query($sql) == true && isset($_POST['create_account'])) {
