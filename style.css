@@ -50,9 +50,10 @@ body {
 }
 
 .aircraft {
-    
-    margin-right: auto;
-    margin-left: auto;
+   position:relative;
+   display: inline-block;
+   float:left;
+   padding:10px;
 }
 
 .schedule p {
