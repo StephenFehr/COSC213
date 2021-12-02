@@ -21,6 +21,7 @@ $sql = "SELECT firstname, lastname, email, password FROM users WHERE email = '".
 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1)
 {
+  
   //get user information
   while($info = mysqli_fetch_array($result))
   {
@@ -28,8 +29,9 @@ if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1)
     $firstname = stripslashes($info["firstname"]);
     $lastname = stripslashes($info["lastname"]);
   }
-$_SESSION["email"] = $email;
-$_SESSION["auth_user"] = $firstname." ".$lastname;
+  $_SESSION["loggedin"] = true;
+  $_SESSION["email"] = $email;
+  $_SESSION["auth_user"] = $firstname." ".$lastname;
 }
 ?>
 
