@@ -105,7 +105,8 @@ if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1){
         
           </div>
       </body>
-  </html>;
+  </html>
+<?php
 }
 else
 {
@@ -116,4 +117,4 @@ else
     header("Location: login.php");
     exit; 
 }
-
+?>
