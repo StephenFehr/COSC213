@@ -79,7 +79,7 @@ else
             <?php
                 $col = array("Flight ID", "Model", "Departure");
                 $numcol = count($col);
-                $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "arifield");
+                $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfield");
                 $sql = "SELECT f.flight_id, p.model, f.schedule FROM flights f, planes p WHERE p.plane_id = f.plane_id AND f.schedule < (curdate() + 7)";
                 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
