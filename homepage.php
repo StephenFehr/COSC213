@@ -70,13 +70,11 @@ if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1){
                 mysqli_free_result($result);
                 mysqli_close($mysqli);
     
-                $DBName = "airfield";
-                $TableName = "flights";
                 $col = array("Flight ID", "Model", "Departure");
                 $numcol = count($col);
 
                 //connect to server and select database
-                $mysqli = mysqli_connect("localhost", "cs213user", "letmein", $DBName);
+                $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "arifield");
 
                 $sql = "SELECT f.flight_id, p.model, f.schedule FROM flights f, planes p WHERE p.plane_id = f.plane_id AND f.schedule < (curdate() + 7)";
             
