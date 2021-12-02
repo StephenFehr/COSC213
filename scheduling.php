@@ -55,7 +55,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true)
             <a href="homepage.php">Home</a>
             <a href="aircraft.php">Aircraft</a>
             <a href="scheduling.php" style="pointer-events: none;">Scheduling</a>
-            <a href="login.php">Logout</a>
+            <a href="logout.php">Logout</a>
         </div>
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
         <!-- content -->
