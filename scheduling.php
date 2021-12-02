@@ -59,7 +59,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true)
         </div>
         <img id="titleImage" src="images/airplane.png" alt="Runway Image">
         <!-- content -->
-        <h2>Book a flight.</h2>
+        <h2>Flight schedules.</h2>
         <p style="color: red;"><strong>Please note that current COVID-19 travel restrictions may affect flight schedules.</strong></p>
         <div class="booking">
             
