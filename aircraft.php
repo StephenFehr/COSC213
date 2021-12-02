@@ -1,5 +1,7 @@
-<?php $_SESSION["loggedin"] = true; ?>
-<html>
+<?php $_SESSION["loggedin"] = true; 
+if($_SESSION["email"] == $_SESSION["validEmail"])
+{
+echo '<html>
     <head>
         <title>Featured Aircraft</title>
         <meta charset="UTF-8">
@@ -85,4 +87,10 @@
             <img id="nomad" src="images/gafNomad.jpg" alt="GAF Nomad Aiplane Image" style="width: 500px; height: 400px;">
         </div>
     </body>
-</html>
+</html>';
+}
+else
+{
+    header("Location: login.php");
+    exit;
+}
