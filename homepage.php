@@ -99,8 +99,9 @@ if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1){
                     echo "</tr>";
                 } //while
             }
+            echo "</table>";
             ?>
-            </table>
+            
         
           </div>
       </body>
