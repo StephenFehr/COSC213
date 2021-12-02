@@ -22,7 +22,7 @@ $sql = "SELECT firstname, lastname, email, password FROM users WHERE email = '".
 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 if($_SESSION["email"])
 {
- echo "you are here";
+ echo $form;
 }
 else
 {
@@ -34,7 +34,7 @@ else
     exit; 
 }
 ?>
-<html>
+$page = '<html>
     <head>
         <title>Featured Aircraft</title>
         <meta charset="UTF-8">
@@ -120,4 +120,4 @@ else
             <img id="nomad" src="images/gafNomad.jpg" alt="GAF Nomad Aiplane Image" style="width: 500px; height: 400px;">
         </div>
     </body>
-</html>
+</html>';
