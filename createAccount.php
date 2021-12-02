@@ -42,7 +42,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
             //get the number of rows in the result set; should be 1 if a match
-            if (mysqli_num_rows($result) == 1 && isset($_POST["create_account"])) {
+            if (mysqli_num_rows($result) == 1) {
 
                 //email is already used message
                 echo '<h3>The email address ' . $email . ' is already in use, please try again.</h3>';
@@ -56,7 +56,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 //insert new account information into users database
                 $sql = "INSERT INTO users VALUES ('$firstname', '$lastname', '$email', SHA1('$password'))";
 
-                if ($connect->query($sql) == true && isset($_POST['create_account'])) {
+                if ($connect->query($sql) == true) {
                     echo '<h2>Thank you '.$firstname.' '.$lastname.', your account ' . $email . ' has been created. Please login to book a flight.</h2>';
                     echo '<a href="login.php">Go To Login</a>';
                 }
