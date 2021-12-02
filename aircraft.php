@@ -10,7 +10,7 @@
         //Cessna 150
         $(document).ready(function(){
           $("#cessna").hover(function(){
-            $(this).css({opacity: 0.8}, 500);
+            $(this).css({opacity: 0.6}, 500);
             }, function () {
               $(this).css({opacity: 1.0}, 500);
            });
@@ -28,7 +28,7 @@
            //Harbin Y-12
            $(document).ready(function(){
           $("#harbin").hover(function(){
-            $(this).css({opacity: 0.8}, 500);
+            $(this).css({opacity: 0.6}, 500);
             }, function () {
               $(this).css({opacity: 1.0}, 500);
            });
@@ -46,7 +46,7 @@
            //GAF Nomad
            $(document).ready(function(){
           $("#nomad").hover(function(){
-            $(this).css({opacity: 0.8}, 500);
+            $(this).css({opacity: 0.6}, 500);
             }, function () {
               $(this).css({opacity: 1.0}, 500);
            });
