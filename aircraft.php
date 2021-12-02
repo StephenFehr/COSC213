@@ -1,7 +1,48 @@
-<?php $_SESSION["loggedin"] = true; 
-if($_SESSION["email"] == $_SESSION["validEmail"])
+<?php 
+session_start();
+$_SESSION["loggedin"] = true;
+if((!filter_input(INPUT_POST, 'validEmail')) || (!filter_input(INPUT_POST, 'validPassword')))
 {
-echo '<html>
+  if($_SESSION["loggedin"] == false)
+  {
+    header("Location: login.php");
+    exit;
+  }
+}
+
+//check database for valid email and password fields
+$mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfieldDB");
+$validEmail = filter_input(INPUT_POST, 'validEmail');
+$validPassword = filter_input(INPUT_POST, 'validPassword');
+
+//query database
+$sql = "SELECT firstname, lastname, email, password FROM users WHERE email = '".$validEmail."' AND password = SHA1('".$validPassword."')";
+
+//get results from valid input query
+$result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
+if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1)
+{
+  //get user information
+  while($info = mysqli_fetch_array($result))
+  {
+    $email = stripslashes($info["email"]);
+    $firstname = stripslashes($info["firstname"]);
+    $lastname = stripslashes($info["lastname"]);
+  }
+$_SESSION["email"] = $email;
+$_SESSION["auth_user"] = $firstname." ".$lastname;
+}
+else
+{
+  if(isset($_POST["submit"]))
+  {
+    $_SESSION["unauthorized"] = "User unauthorized, please try again or create account.";
+  }
+    header("Location: login.php");
+    exit; 
+}
+?>
+<html>
     <head>
         <title>Featured Aircraft</title>
         <meta charset="UTF-8">
@@ -87,10 +128,4 @@ echo '<html>
             <img id="nomad" src="images/gafNomad.jpg" alt="GAF Nomad Aiplane Image" style="width: 500px; height: 400px;">
         </div>
     </body>
-</html>';
-}
-else
-{
-    header("Location: login.php");
-    exit;
-}
+</html>
