@@ -65,6 +65,9 @@ if($_SESSION["loggedin"] == true || mysqli_num_rows($result) == 1){
                   DNS Airfield accepts both private and commercial aviation in classes of fixed wing and rotary aircraft.</p>
           </div>
           <div class="schedule">'
+                mysqli_free_result($result);
+                mysqli_close($mysqli);
+    
                 $DBName = "airfield";
                 $TableName = "flights";
                 $col = array("Flight ID", "Model", "Departure");
