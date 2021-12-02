@@ -49,6 +49,12 @@ body {
     height: 50%;
 }
 
+.aircraft {
+    
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .schedule p {
     display: inline-block;
 }
