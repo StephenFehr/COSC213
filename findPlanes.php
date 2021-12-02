@@ -1,4 +1,10 @@
 <?php
+    session_start();
+    if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true)
+    {
+        header("Location: login.php");
+        exit;
+    }
     $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfield");
     $sql = "SELECT * from planes;";
     $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
