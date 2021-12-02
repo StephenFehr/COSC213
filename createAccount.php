@@ -31,11 +31,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         $password = $_POST['password'];
         if(isset($_POST["create_account"]))
         {
-            if($_SESSION["loggedin"] == false)
-            {
-              $_SESSION["unauthorized"] = ""; 
-            }
-
             //connect to server and select database
             $mysqli = mysqli_connect("localhost", "cs213user", "letmein", "airfieldDB");
 
