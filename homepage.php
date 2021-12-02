@@ -33,10 +33,9 @@ $_SESSION["auth_user"] = $firstname." ".$lastname;
 }
 else
 {
-  if(isset($_POST["submit"]) == true)
+  if(isset($_POST["submit"]))
     {
       $_SESSION["unauthorized"] = "User unauthorized, please try again or create account.";
-      $_POST["submit"] == false;
     }
     header("Location: login.php");
     exit; 
