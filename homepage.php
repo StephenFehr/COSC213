@@ -33,10 +33,6 @@ $_SESSION["auth_user"] = $firstname." ".$lastname;
 }
 else
 {
-  if(isset($_POST["submit"]) && $_SESSION["loggedin"] == false)
-    {
-      $_SESSION["unauthorized"] = "User unauthorized, please try again or create account.";
-    }
     header("Location: login.php");
     exit; 
 }
